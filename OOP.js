@@ -19,16 +19,31 @@
 //
 // console.log(person.sayPresentation())
 
+//old way classes
+// let Person = function (firstName, city) {
+//   this.firstName = firstName;
+//   this.city = city;
+//
+//   this.sayHello = function () {
+//     console.log(`My name is ${this.firstName}`);
+//   }
+// }
+//
+// const marc = new Person('Marc', 'Barcelona');
+//
+// marc.sayHello();
 
-let Person = function (firstName, city) {
-  this.firstName = firstName;
-  this.city = city;
 
-  this.sayHello = function () {
-    console.log(`My name is ${this.firstName}`);
+//class
+
+class Person {
+  constructor(firstName, city) {
+    this.firstName = firstName;
+    this.city = city;
+  }
+  sayHello() {
+    console.log(`My name is ${this.firstName}`)
+  }
+
   }
 }
-
-const marc = new Person('Marc', 'Barcelona');
-
-marc.sayHello();
